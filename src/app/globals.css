@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #FFFDD0;
+  --barn-red: #A52A2A;
+  --cornfield-yellow: #F2DC5D;
+  --sky-blue: #87CEEB;
+  --grass-green: #4A7023;
+  --warm-brown: #8B4513;
+  --soft-gray: #D3D3D3;
+}
+
+@layer base {
+  body {
+    @apply text-warm-brown bg-cream;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-barn-red text-cream px-4 py-2 rounded-lg hover:opacity-90 transition-opacity;
+  }
+  
+  .btn-secondary {
+    @apply bg-cornfield-yellow text-warm-brown px-4 py-2 rounded-lg hover:opacity-90 transition-opacity;
+  }
+  
+  .input-field {
+    @apply border-2 border-soft-gray rounded-lg px-3 py-2 focus:outline-none focus:border-sky-blue;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+}
